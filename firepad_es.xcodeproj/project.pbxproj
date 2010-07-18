@@ -126,9 +126,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* firepad_es */ = {
+		1D6058900D05DD3D006BFB54 /* firepad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "firepad_es" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "firepad" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -138,7 +138,7 @@
 			);
 			dependencies = (
 			);
-			name = firepad_es;
+			name = firepad;
 			productName = firepad_es;
 			productReference = 1D6058910D05DD3D006BFB54 /* firepad_es.app */;
 			productType = "com.apple.product-type.application";
@@ -155,7 +155,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* firepad_es */,
+				1D6058900D05DD3D006BFB54 /* firepad */,
 			);
 		};
 /* End PBXProject section */
@@ -213,7 +213,7 @@
 				GCC_PREFIX_HEADER = firepad_es_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "firepad_es-Info.plist";
-				PRODUCT_NAME = firepad_es;
+				PRODUCT_NAME = firepad;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -253,7 +253,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "firepad_es" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "firepad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,

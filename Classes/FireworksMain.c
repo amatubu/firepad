@@ -31,7 +31,7 @@
 
 
 /* difinitions */
-#define	f		420.0f // ����
+#define	f		420.0f // 視差
 #define	zNear	3000.0f
 #define	zFar	6000.0f
 #define	z0		3500.0f
@@ -954,7 +954,7 @@ void launchingFireworksPostDraw(short l)
     
     if (firePtr->m != FW_LAUNCHING_PHASE) return;
     
-    // �ł��グ�̌���\��
+    // 打ち上げの光を表示
     glPointSize(PARTICLE_SIZE);
 //    glBegin(GL_POINTS);
 //    glColor4f(1.0f,1.0f,1.0f,1.0f);

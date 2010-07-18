@@ -35,7 +35,6 @@ extern float	screen_width,screen_height;
         glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, colorRenderbuffer);
         
         initFireworks();
-        reshape(backingWidth, backingHeight);
     }
 
     return self;
@@ -52,15 +51,15 @@ extern float	screen_width,screen_height;
     glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
     glViewport(0, 0, backingWidth, backingHeight);
 
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
-
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     glOrthof(0, (GLfloat)backingWidth, 0, (GLfloat)backingHeight, -10000, 10000);
 
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+    
     screen_width = backingWidth;
     screen_height = backingHeight;
     
