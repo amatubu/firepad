@@ -19,6 +19,7 @@
 		2F76493211E1118600B1BA40 /* FireworksMain.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F76493011E1118600B1BA40 /* FireworksMain.c */; };
 		2F7649A411E22D7000B1BA40 /* dist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F7649A311E22D7000B1BA40 /* dist.plist */; };
 		2FCDECA011F400EC00623491 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FCDEC9F11F400EC00623491 /* icon.png */; };
+		2FCDECEE11F4A66100623491 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDECED11F4A66100623491 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		2F76493111E1118600B1BA40 /* FireworksMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireworksMain.h; sourceTree = "<group>"; };
 		2F7649A311E22D7000B1BA40 /* dist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dist.plist; sourceTree = "<group>"; };
 		2FCDEC9F11F400EC00623491 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		2FCDECED11F4A66100623491 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* firepad_es_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firepad_es_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* firepad_es-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "firepad_es-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +55,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
 				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
+				2FCDECEE11F4A66100623491 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +121,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2FCDECED11F4A66100623491 /* CoreGraphics.framework */,
 				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
 				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -204,7 +208,7 @@
 				GCC_PREFIX_HEADER = firepad_es_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "firepad_es-Info.plist";
-				PRODUCT_NAME = firepad_es;
+				PRODUCT_NAME = firepad;
 			};
 			name = Debug;
 		};

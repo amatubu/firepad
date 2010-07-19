@@ -13,6 +13,7 @@
 @interface firepad_esAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     EAGLView *glView;
+    CGSize screenSize;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

@@ -16,8 +16,57 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions   
 {
+    // スクリーンが回転したかどうかを受けとる
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didRotate:)
+                                                 name:UIDeviceOrientationDidChangeNotification
+                                               object:nil];
+
+    // スクリーンの初期サイズを調べておく
+    UIScreen *screen = [UIScreen mainScreen];
+    screenSize = screen.bounds.size;
+
     [glView startAnimation];
     return YES;
+}
+
+- (void) didRotate:(NSNotification *)notification {
+    UIDeviceOrientation orientation = [[notification object] orientation];
+
+    // TODO: 回転をスムーズに
+    switch ( orientation ) {
+        case UIDeviceOrientationLandscapeLeft:
+            NSLog( @"LandscapeLeft" );
+            glView.bounds = CGRectMake( 0.0f, 0.0f,
+                                        screenSize.height,
+                                        screenSize.width );
+            glView.transform = CGAffineTransformMakeRotation( M_PI * 90.0f / 180.0f );
+            break;
+        case UIDeviceOrientationLandscapeRight:
+            NSLog( @"LandscapeRight" );
+            glView.bounds = CGRectMake( 0.0f, 0.0f,
+                                        screenSize.height,
+                                        screenSize.width );
+            glView.transform = CGAffineTransformMakeRotation( - M_PI * 90.0f / 180.0f );
+            break;
+        case UIDeviceOrientationPortrait:
+            NSLog( @"Portrait" );
+            glView.bounds = CGRectMake( 0.0f, 0.0f,
+                                        screenSize.width,
+                                        screenSize.height );
+            glView.transform = CGAffineTransformMakeRotation( 0.0f );
+            break;
+        case UIDeviceOrientationPortraitUpsideDown:
+            NSLog( @"PortraitUpsideDown" );
+            glView.bounds = CGRectMake( 0.0f, 0.0f,
+                                        screenSize.width,
+                                        screenSize.height );
+            glView.transform = CGAffineTransformMakeRotation( M_PI );
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
