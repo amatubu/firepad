@@ -368,8 +368,7 @@ void launchingFireworks(short l)
 	
 	// gravity
 	firePtr->vy -= G1;
-	firePtr->vx *= 0.99f;
-	firePtr->vx *= 0.99f;
+	firePtr->vx *= 0.975f;
 	
 	if (firePtr->vy < 0.5f)
 	{

@@ -42,7 +42,7 @@
 
 #define	MAX_GRAVITY				0.2f
 #define	MIN_GRAVITY				0.01f
-#define	DEFAULT_GRAVITY			0.1f
+#define	DEFAULT_GRAVITY			0.08f
 
 #define	COLORMODE_RANDOM		0
 #define	COLORMODE_PALETTE		1
